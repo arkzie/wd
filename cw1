@@ -1,0 +1,26 @@
+str1 = input('podaj bla')
+str2 = str1.split(" ")
+all_freq={}
+for i in str1:
+    if i in all_freq:
+        all_freq[i]+=1
+    else:
+         all_freq[i]=1
+x= max(all_freq, key=all_freq.get)
+
+y={}
+for i in str2:
+    y[i] = i.count(x)
+
+z= {}
+for i in str2:
+    tmp = {}
+    for j in i:
+        if j in tmp:
+            tmp[j]+=1
+        else:
+            tmp[j]=1
+        z[i] = max(tmp, key= tmp.get)
+print(x)
+print(y)
+print(z)
