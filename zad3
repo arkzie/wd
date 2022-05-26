@@ -1,0 +1,17 @@
+import random
+lista = []
+while len(lista)<=7:
+    print("Podaj ciąg cyfr, conajmniej 7")
+    c = input()
+    lista = c.split(" ")
+print(lista)
+wynik = []
+a = len(lista)//2
+for x in range(int(lista[-1])):
+    tmp=[]
+    for x in range(int(lista[-3])):
+     c = int(lista[0])
+     b = int(lista[a])
+     tmp.append(random.randint(c,b-1))
+    wynik.append(tmp)
+print(wynik)
