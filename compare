@@ -1,0 +1,12 @@
+c = 'kajakaa'
+d = 'sajakaa'
+print(len(c))
+print(len(d))
+s = len(c)
+if ((len(c)%2 == 0) or (len(d)%2 == 0)):
+    print('Wyrazy są parzyste')
+else:
+    print('Wyrazy sa nieparzyste')
+    for i in range(s):
+        if (c[i]) == (d[i]):
+           print('Jest taka sama litera na miejscu', i, 'I jest to', c[i])
