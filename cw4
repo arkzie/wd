@@ -1,0 +1,18 @@
+lista = []
+wynik = 0
+while True:
+    print("Podaj conajmniej 5 wyrazów, q kończy")
+    c = str(input())
+    if c.isalpha():
+        d = len(c)
+        if c == 'q' and wynik >=5:
+            break
+        elif d >=5:
+            wynik = wynik+1
+            lista.append(c)
+        else:
+            print('za krótki wyraz, podaj kolejny')
+    else:
+        print('To nie jest wyraz')
+        print(lista)
+
