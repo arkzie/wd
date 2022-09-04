@@ -1,0 +1,17 @@
+import numpy as np
+import pandas as pd
+import matplotlib.pyplot as plt
+import seaborn as sns
+
+dane = pd.read_excel("rod6.xlsx")
+plt.scatter(dane["Rok"], dane["Wartosc"], marker="<", color = "red", label = "Wartość")
+plt.legend()
+plt.title('fdsfdsfds')
+plt.xlabe("Lata")
+plt.xticks(dane["Rok"])
+plt.ylabel("szt.")
+plt.grid()
+plt.tight_layout()
+plt.show()
+
+
