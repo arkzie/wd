@@ -1,0 +1,18 @@
+import numpy as np
+import pandas as pd
+import matplotlib.pyplot as plt
+import seaborn as sns
+
+dane = pd.read_excel("uczniowie6.xlsx")
+x = dane["Rok"]
+y = dane["Wartość"]
+plt.scatter(x,y, color='darkgreen', marker='^')
+plt.savefig("za2.pdf")
+plt.title("blfsdg")
+plt.xlabel("Lata")
+yt = [120000, 1400000, 1600000]
+ytz = ["1.2 mln", "1.4 mln", "1.6mln"]
+plt.yticks(yt, ytz)
+plt.annotate(xy=[2018.5,1150000], text="18:12")
+plt.grid()
+plt.show()
