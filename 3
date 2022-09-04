@@ -1,0 +1,17 @@
+import numpy as np
+import pandas as pd
+import matplotlib.pyplot as plt
+import seaborn as sns
+
+dane = pd.read_csv("uczniowie6.csv", sep="_")
+m = dane[dane["Płeć"]=="M"]
+k = dane[dane["Płeć"]=="K"]
+et = m["Sport"]
+
+plt.subplot(1,2,1)
+plt.title('gfsdgfd')
+plt.pie(m["Popularność"], autopct='%1.0f%%', labels=et)
+plt.subplot(1,2,2)
+plt.title('gfsdgffdfd')
+plt.pie(k["Popularność"], autopct='%1.0f%%', labels=et)
+plt.savefig("zad3.jpg")
