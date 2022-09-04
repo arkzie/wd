@@ -1,0 +1,104 @@
+Studia 
+
+
+import numpy as np
+import pandas as pd
+import matplotlib.pyplot as plt
+
+x = np.arange(6)
+y = np.array([27,38,40,26,2,8])
+plt.barh(x,y, color="tab:pink", label="A")
+y2 = np.array([-50,-27,-30,-44,-38,-42])
+plt.barh(x,y2, color="tab:cyan", label="A")
+plt.title("Wykres zmian A i B")
+plt.legend()
+m=["sty","luty","marz","kw","maj","czew"]
+plt.yticks(x,m, rotation=45)
+plt.savefig("zad1.png")
+plt.show()
+
+
+
+
+
+
+import numpy as np
+import pandas as pd
+import matplotlib.pyplot as plt
+
+x = np.arange(6)
+y = np.array([35,38,20,26,37,35])
+plt.bar(x,y, color="tab:green", label="A")
+y2 = np.array([-15,-11,-14,-21,-18,-28])
+plt.bar(x,y2, color="tab:red", label="B")
+plt.title("Wykres zmian A i B")
+plt.legend()
+m=["sty","luty","marz","kw","maj","czew"]
+plt.xticks(x,m, rotation=45)
+plt.savefig("zad1.png")
+plt.tight_layout
+plt.show()
+
+
+
+import matplotlib.pyplot as plt
+import seaborn as sns
+
+Product = ['A', 'B', 'C', 'D', 'E']
+Quantity = [-45, -26, -24, -15, -50]
+Quantity2 = [-50, -40, -30, -20, -10, ]
+
+Color = ['Orange', 'Brown', 'Purple', 'Red', 'Blue']
+sns.set_palette(Color)
+plt.barh(Product, Quantity, color=Color)
+plt.title('Wykres Słupki')
+plt.show()
+
+
+
+import matplotlib.pyplot as plt
+import pandas as pd
+
+df = pd.read_excel('sprzedaz12.xlsx')
+print(df)
+dfg = df.groupby(['Produkt', 'Rok'])['Sprzedaż'].sum()
+print(dfg)
+dfg.plot(kind= 'pie')
+plt.text(0.0,'136251',
+         horizontalaligment = 'left',
+         verticalaligment = 'center')
+plt.show()
+
+
+import numpy as np
+import pandas as pd
+import matplotlib.pyplot as plt
+import seaborn as sns
+
+p = np.linspace(0,3*np.pi)
+y1 = np.logspace(0,3*np.pi, base=np.e)
+y2 = 3*p-5
+y3 = 2*np.cos(p)
+sns.lineplot(data=y1, label="ln(x)", color ="b")
+sns.lineplot(data=y2, label="ln(x)", color ="r")
+sns.lineplot(data=y3, label="ln(x)", color ="g")
+plt.show()
+
+
+
+import numpy as np
+import pandas as pd
+import matplotlib.pyplot as plt
+import seaborn as sns
+
+df = pd.read_excel("ceny33.xlsx")
+
+dfg = df.groupby(["Rodzaje towarów i usług", "Miesiące"])['Wartość'].sum()
+print(dfg)
+ax = dfg.plot()
+plt.text(-0.5, 2, '136251'',
+         horizontalalignment='left',
+verticalalignment='top')
+plt.xticks()
+
+
