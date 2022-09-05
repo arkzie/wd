@@ -1,0 +1,63 @@
+import numpy as np
+import matplotlib.pyplot as plt
+import pandas as pd
+
+x = np.arange(4)
+y1 = [8,39,40,18]
+y2 = [47,49,20,39]
+y3 = [56,60,58,38]
+color =['teal','darkturquoise','steelblue']
+
+plt.bar(x-0.25,y1, width=0.25, color = 'teal', label = 'Z')
+plt.bar(x,y2,width=0.25, color = 'blue',label = 'Y' )
+plt.bar(x+0.25,y3,width=0.25, color = 'steelblue', label = 'X')
+plt.xticks(x, ['PL','DE','FR','SK'])
+plt.xlabel("Kraje", color = 'green')
+plt.ylabel("Sprzedaż", color = 'Red')
+plt.legend(loc = 7)
+plt.tight_layout()
+plt.show()
+
+
+
+import matplotlib.pyplot as plt
+import numpy as np
+x2 = ['A', 'B', 'C', 'D', 'E']
+y2 = [-34, -20, -50, -34, -42]
+plt.subplot(1,2,1)
+plt.barh(x2,y2, color=['green', 'yellow','blue', 'violet', 'indianred'])
+plt.xticks(np.arange(0, -55, -10))
+plt.title('wykres 1')
+
+etykiety = ['A', 'B', 'C', 'D', 'E']
+wartosci = [38, 38, 40, 32, 36]
+plt.subplot(1,2,2)
+plt.barh(etykiety, wartosci)
+plt.title('wykres 2')
+plt.show()
+
+
+
+x = [0.05,0.05,0.47,0.7,0.86]
+y = [0.05,0.15,0.87,0.58,0.32]
+plt.scatter(x,y, color = ['brown','green','pink','gray','orange'], s = 60)
+plt.title("Wykres punktowy")
+plt.yticks(np.arange(0,0.9,0.1))
+plt.xticks(np.arange(0,0.9,0.1))
+plt.grid()
+plt.show()
+
+
+
+
+
+dane = pd.read_excel("Linieautobusowe11.xlsx")
+rok = dane['Rok']
+wartosc = dane['Wartosc']
+plt.scatter(rok,wartosc, s=30, marker = '^')
+plt.xticks(dane['Rok'])
+plt.title("Liczba lini autobusowych w Polsce")
+plt.xlabel("Lata")
+plt.ylabel("szt.")
+plt.annotate(xy= [2014,15500], text='137349')
+plt.show()
