@@ -1,0 +1,20 @@
+import pandas as pd
+import numpy as np
+import matplotlib.pyplot as plt
+
+fig, ax1 = plt.subplots()
+x = np.arange(0, 10.0, 0.1)
+y = x+4
+y2 = -x-6
+ax1.plot(x,y, linestyle = 'dashed', color = 'red', label= 'x+4')
+ax1.legend()
+ax1.set_ylabel('Oś pionowa po lewej stronie', color = 'red')
+ax1.set_xlabel('Oś pozioma', color = 'green')
+ax1.set_title('Wykres dwóch funkcji liniowych')
+ax2 = ax1.twinx()
+ax2.plot(x,y2, linestyle = 'dashdot', color = 'blue', label= '-x-6')
+ax2.set_ylabel('Oś pionowa po prawej stronie', color = 'blue')
+ax2.legend()
+fig.tight_layout()
+plt.savefig("zad1.png")
+plt.show()
