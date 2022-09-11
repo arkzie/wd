@@ -1,0 +1,16 @@
+import pandas as pd
+import numpy as np
+import matplotlib.pyplot as plt
+
+data1 = np.array([35, 45, 54, 62, 71])
+data3 = np.array([5, 10, 15, 20, 25])
+x = np.arange(5)
+# plt.barh(x, data1, color = "red")
+# data2 = np.array([15, 13, 25, 20, 17])
+data2 = np.array([15, 20, 25, 30, 35])
+
+# plt.barh(x, data2, color = "blue")
+# fig = plt.subplots()
+plt.barh(x, data3, color = "red", label = "red")
+plt.barh(x, data2, color = "black", left=data3)
+plt.barh(x, data1, color = "green", left=data3+data2)
