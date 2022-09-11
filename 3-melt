@@ -1,0 +1,8 @@
+import numpy as np
+import matplotlib.pyplot as plt
+
+dane = pd.read_csv("malzenstwa23.csv", sep="#")
+dane2 = dane.melt(id_vars=["Województwo"])
+lubuskie = dane2[dane2["Województwo"] == "LUBUSKIE"]
+opolskie = dane2[dane2["Województwo"] == "OPOLSKIE"]
+podkarpackie = dane2[dane2["Województwo"] == "PODKARPACKIE"]
