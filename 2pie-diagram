@@ -1,0 +1,21 @@
+import pandas as pd
+import numpy as np
+import matplotlib.pyplot as plt
+df = pd.read_excel('gastronomia31.xlsx', header=None).T
+df. columns = ["Typ", "Rok", "Wartosc"]
+pd.Series(df["Rok"], dtype=int)
+rok2016 = df[df["Rok"] == "2017"]
+
+rok2019 = df[df["Rok"] == "2019"]
+print(rok2019)
+print(rok2016)
+
+x = np.arange(4)
+# rok2017 = df[df[Rok] == "2017"]
+plt.subplot(2,2,1)
+plt.pie(rok2016["Wartosc"], startangle=45)
+plt.subplot(2,2,4)
+plt.pie(rok2019["Wartosc"], startangle=45)
+
+plt.show()
+print(rok2019)
