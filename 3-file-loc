@@ -1,0 +1,4 @@
+dane = dane.iloc[1, :]
+dane.columns = dane.iloc[0, :]
+
+dane["Rok"] = pd.Series(dane2["Rok"], dtype=int)
